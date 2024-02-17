@@ -1,0 +1,16 @@
+.card{
+    margin: 50px 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+.card img{
+    width: 400px;
+    height: auto;
+}
+.info{
+    text-align: start;
+    margin: 20px 10px;
+}
+.info p{
+    margin-top: 7px;
+}
