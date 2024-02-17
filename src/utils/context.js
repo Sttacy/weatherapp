@@ -10,6 +10,7 @@ export const useAPP = () => {
 export const AppProvider = ({ children }) => {
   const [globalState, setGlobalState] = useState([]);
   const [weatherState, setWeather] = useState([]);
+  const [index, setIndex] = useState(0);
 
   const get_data = async (...objValue) => {
     const searchValue = objValue[0] || "ukraine";
@@ -43,9 +44,20 @@ export const AppProvider = ({ children }) => {
     get_data();
   }, []);
 
+  function updateIndex(newIndex) {
+    setIndex(newIndex);
+  }
+
   return (
     <AppContext.Provider
-      value={{ globalState, get_data, weatherState, getWeatherData }}
+      value={{
+        globalState,
+        get_data,
+        weatherState,
+        getWeatherData,
+        index,
+        updateIndex,
+      }}
     >
       {children}
     </AppContext.Provider>

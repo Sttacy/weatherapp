@@ -11,7 +11,6 @@ export default function CurrentForecast() {
     if(!weatherData){
         return null
     }
-console.log(weatherData);
     return (
     <div className={s.card} style={{
         width: "50vw",
@@ -25,20 +24,25 @@ console.log(weatherData);
         <div className={s.condition}>
         <figure>
   <img src={humidity}/>
-  <figcaption>{weatherData.humidity}%</figcaption>
+  <h2>{weatherData.humidity}%</h2>
+  <figcaption>Humidity</figcaption>
+
 </figure>
 <figure>
   <img src={pressure}/>
-  <figcaption>{weatherData.pressure_mb}hPa</figcaption>
+  <h2>{weatherData.pressure_mb}hPa</h2>
+  <figcaption>Pressure</figcaption>
 </figure>
 <figure>
   <img src={u}/>
-  <figcaption>{weatherData.uv}</figcaption>
+  <h2>{weatherData.uv}</h2>
+<figcaption>UV</figcaption>
 </figure>
 <figure>
   <img src={wind}/>
-  <figcaption>{weatherData.
-wind_kph}kph</figcaption>
+  <h2>{weatherData.
+wind_kph}kph</h2>
+<figcaption>Wind speed</figcaption>
 </figure>
         </div>
     </div>

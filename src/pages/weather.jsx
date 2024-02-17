@@ -3,11 +3,12 @@ import { useAPP } from "../utils/context";
 import { WEATHER_PROFILE } from "../utils/db_prifile";
 import s from "../style/news.module.css";
 import Date_location from "../components/weather/Date_location";
-import Current_forecast from "../components/weather/current_forecast";
+// import Current_forecast from "../components/weather/current_forecast";
 import CurrentForecast from "../components/weather/current_forecast";
 import Forecast from "../components/weather/forecast";
+import HourForecast from "../components/weather/hour_forecast";
 
-const Weather = () => {
+const Weather = ()=> {
   const { weatherState, getWeatherData } = useAPP();
   const [weather, setWeather] = useState(weatherState);
   const [inputValue, setInputValue] = useState("");
@@ -27,7 +28,6 @@ const Weather = () => {
   useEffect(() => {
     fetchWeatherData();
   }, []);
-  console.log(weather.location);
   //!
   function handleInputChange(e) {
     setInputValue(e.target.value);
@@ -58,6 +58,7 @@ const Weather = () => {
         <Date_location location= {weather.location}/>
         <CurrentForecast/>
         <Forecast/>
+        <HourForecast/>
       </div>
     </div>
   );

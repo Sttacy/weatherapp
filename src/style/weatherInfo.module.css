@@ -4,6 +4,7 @@
     background-color: rgb(246, 246, 246);
     box-shadow: 10px 10px 4px #00000078
     ;
+    border-radius: 20px
 }
 .card li{
     color: #292929;
@@ -30,6 +31,7 @@
 }
 .weatherTemp{
 display: block;
+width: 70%;
 }
 .temp{
     font-weight: 700;
@@ -51,10 +53,17 @@ display: block;
 }
 .condition{
 display: flex;
-justify-content: space-between;
+justify-content: start;
+flex-wrap: wrap;
+align-items: center;
 }
-.condition{
-    display: flex;
+.condition figure{
+    width: 150px;
+    padding: 5px 10px;
+}
+.condition figure img{
+    width: 50px;
+    height: auto;
 }
 .flex{
     text-align: center;
@@ -70,4 +79,22 @@ justify-content: space-between;
     font-weight: 700;
     font-size: 20px;
     color: #3a3939;
+}
+.weatherCard{
+    width: 380px;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+}
+.weatherCard p{
+    font-weight: bold;
+    font-size: 24px;
+}
+.hourlyForecast{
+    display: flex;
+    width: 60vw;
+    overflow: auto;
+    padding: 10px 10px;
+    align-items: center;
 }
